@@ -21,8 +21,8 @@ ENV PYTHONIOENCODING utf_8
 
 RUN mkdir -p /app
 WORKDIR /app
+ADD . /app/
 
-COPY requirements.txt /app/
 # set timeout up a bit, pip is impatient and pypi is slooooooooow.
 RUN pip install --default-timeout=100 --no-cache-dir -r requirements.txt
 
